@@ -23,7 +23,7 @@ totlos.msm(model_out) #days spent it each state
 rate <- qmatrix.msm(model_out)[1,1][1] #rate out of the open state
 Days <- seq(0, 500, by=1)
 mean_fee <- int_data$stab_fee %>% unique() %>% mean() #mean in dataset
-ir <- read_csv("interest rates daily.csv") %>% data.frame()
+ir <- read_csv("stability fees daily.csv") %>% data.frame()
 mean_fee_bydate <-mean(ir$Rate) #mean for unique days
 
 get_rate <- function (fac){
